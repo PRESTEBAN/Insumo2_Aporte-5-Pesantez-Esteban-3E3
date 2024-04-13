@@ -3,8 +3,8 @@
 #include <addons/TokenHelper.h>
 #include <addons/RTDBHelper.h>
 
-const char* WIFI_SSID = "Maria_Eugenia_Rea";
-const char* WIFI_PASSWORD = "este06dieg087";
+const char* WIFI_SSID = "red";
+const char* WIFI_PASSWORD = "clave";
 
 // Credenciales de Firebase
 const char* API_KEY = "AIzaSyBwVivZN8J0fPOLyp8pykpCn3mR6EMvT-o";
