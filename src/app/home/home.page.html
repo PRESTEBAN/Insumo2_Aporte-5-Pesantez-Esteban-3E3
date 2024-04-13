@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <strong>Control luz</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="house">
+    <div class="roof">
+      <div class="roof-top"></div>
+      <div class="roof-left"></div>
+      <div class="roof-right"></div>
+    </div>
+    <div class="body">
+      <div class="window window1" [ngClass]="{'light-on': luzBano, 'light-off': !luzBano}" id="Bano"></div>
+      <div class="window window2" [ngClass]="{'light-on': luzCocina, 'light-off': !luzCocina}" id="Cocina"></div>
+      <div class="window window3" [ngClass]="{'light-on': luzDormitorio1, 'light-off': !luzDormitorio1}" id="Dormitorio1"></div>
+      <div class="window window4" [ngClass]="{'light-on': luzDormitorio2, 'light-off': !luzDormitorio2}" id="Dormitorio2"></div>
+      <div class="window window5" [ngClass]="{'light-on': luzDormitorio3, 'light-off': !luzDormitorio3}" id="Dormitorio3"></div>
+      <div class="window window6" [ngClass]="{'light-on': luzSala, 'light-off': !luzSala}" id="Sala"></div>
+      <div class="door">
+        <div class="door-handle"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="buttons-below">
+    <div class="buttons-container">
+      <div class="buttons-left">
+        <ion-button shape="round" [color]="luzBano ? 'warning' : 'primary'" (click)="toggleLight('Bano', luzBano)" class="small-button">
+          {{ luzBano ? 'Baño On' : 'Baño Off' }}
+        </ion-button>
+  
+        <ion-button shape="round" [color]="luzCocina ? 'warning' : 'primary'" (click)="toggleLight('Cocina', luzCocina)" class="small-button">
+          {{ luzCocina ? 'Cocina On' : 'Cocina Off' }}
+        </ion-button>
+  
+        <ion-button shape="round" [color]="luzDormitorio1 ? 'warning' : 'primary'" (click)="toggleLight('Dormitorio1', luzDormitorio1)" class="small-button">
+          {{ luzDormitorio1 ? 'Dormitorio 1 On' : 'Dormitorio 1 Off' }}
+        </ion-button>
+      </div>
+  
+      <div class="buttons-right">
+        <ion-button shape="round" [color]="luzDormitorio2 ? 'warning' : 'primary'" (click)="toggleLight('Dormitorio2', luzDormitorio2)" class="small-button">
+          {{ luzDormitorio2 ? 'Dormitorio 2 On' : 'Dormitorio 2 Off' }}
+        </ion-button>
+  
+        <ion-button shape="round" [color]="luzDormitorio3 ? 'warning' : 'primary'" (click)="toggleLight('Dormitorio3', luzDormitorio3)" class="small-button">
+          {{ luzDormitorio3 ? 'Dormitorio 3 On' : 'Dormitorio 3 Off' }}
+        </ion-button>
+  
+        <ion-button shape="round" [color]="luzSala ? 'warning' : 'primary'" (click)="toggleLight('Sala', luzSala)" class="small-button">
+          {{ luzSala ? 'Sala On' : 'Sala Off' }}
+        </ion-button>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>

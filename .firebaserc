@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "casadogmatica": {
+      "hosting": {
+        "app": [
+          "casadogmatica"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "casadogmatica"
+  }
+}

@@ -1,0 +1,138 @@
+$house-color: #f2c94c;
+$door-color: #8b4513;
+$roof-color: #8b4513;
+
+.house {
+  width: 400px;
+  height: 400px;
+  margin: 50px auto;
+  position: relative;
+
+  .roof {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 100px solid $roof-color;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .body {
+    width: 350px;
+    height: 250px;
+    background-color: $house-color;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    z-index: 0;
+  }
+
+  .window {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+
+    &.light-on {
+      background-color: yellow;
+    }
+
+    &.light-off {
+      background-color: #6698ff;
+    }
+
+    &.window1 {
+      top: 40px;
+      left: 40px;
+    }
+
+    &.window2 {
+      top: 40px;
+      right: 40px;
+    }
+
+    &.window3 {
+      top: 110px;
+      left: 40px;
+    }
+
+    &.window4 {
+      top: 110px;
+      right: 40px;
+    }
+
+    &.window5 {
+      top: 180px;
+      left: 40px;
+    }
+
+    &.window6 {
+      top: 180px;
+      right: 40px;
+    }
+  }
+
+  .door {
+    width: 60px;
+    height: 120px;
+    background-color: $door-color;
+    position: absolute;
+    bottom: 0;
+    left: 145px;
+
+    .door-handle {
+      width: 10px;
+      height: 10px;
+      background-color: #ffd700;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+    }
+  }
+}
+
+.small-button {
+  flex: 1;
+  margin: 0 5px; /* Ajusta el margen entre los botones */
+}
+
+.buttons-below {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 565px; /* Ajusta este valor para colocar los botones debajo de la casa */
+}
+
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%; /* Cambia esto según tus necesidades */
+  margin-top: 100; /* Ajuste para bajar más los botones */
+}
+
+
+.buttons-left,
+.buttons-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-button {
+  margin: 5px; /* Espacio entre los botones */
+  min-width: 100px; /* Ancho mínimo para los botones */
+}
+
+
+
